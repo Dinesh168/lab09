@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMESHA WITH DINESH</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="spa.js"></script>
+    
+    <style type=text/css> 
+    a{
+        color: #fcd581;
+    }
+    p
+    {
+        color: beige;
+    }
+    .imga
+    {
+        float: left;
+        width: 50%;
+        height: 50%;
+    } 
+    .menu
+    {
+        float: left;
+        width: 100%;
+
+    }
+    </style>
+</head>
+<header style=" color:#fcd581 ; ">
+    <div style="background-color: #B30E08;">
+    <img src="logo13.jpeg" alt="loading.." width="200cm" style="float: left; margin-top: 0%; background-color: #990d35;">
+    <p style="color: #fff8e8; text-align: center;">A Quick Start for your Life</p><br>
+    <nav><a href="#/homepage" >Home</a> <a href="#/login">Login</a> <a href="#/register">Register</a>  
+        <a href="#/contact">About us</a>
+        <a href="#/service">About us</a>
+    </nav>
+    </div>
+</header>
+<body>
+    <ng-view></ng-view>
+</body>
+</html>

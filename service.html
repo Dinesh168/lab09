@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Service</title>
+    <style>
+        a{
+            color:#fcd581 ;
+        }
+        td{
+            background-color: #feeafa;
+        }
+        th{
+            background-color:#edf6f9 ;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    
+    <script src="emp.js"></script>
+    <link href="test1.css" rel="stylesheet">
+</head>
+
+<body background="#f2e9e4" ng-app="Myemp">
+    <div style="background-color: #B30E08;">
+        <img src="logo13.jpeg" alt="loading.." width="200cm" style="float: left; margin-top: 0%; background-color: #990d35;">
+        <p style="color: #fff8e8; text-align: center;">A Quick Start for your Life</p><br>
+        <header>
+        <nav><a href="homepage.html" target="_self">Home</a> <a href="login.html">Login</a> <a href="register.html">Register</a>
+              <a href="contact.html">About us</a>
+        </nav>
+        </div>
+<table id="demo" >
+</table>
+<br>
+<h4 id="check">General Service Details :</h4>
+  <div ng-controller="empCtrl">
+      Rows to Display:<input type="number" step="1" min="0" max="6" ng-model="rowlimit"/><br><br>
+      Search:<input type="text" placeholder="Search" ng-model="search">
+      Search:<input type="text" placeholder="Search for Company" ng-model="search.Company">
+      Search:<input type="text" placeholder="Search for Model" ng-model="search.Model"><br><br>
+   <p>10% Discount on and above 10000RS service.</p>
+<table>
+  <tr>
+      <th>Company</th>
+      <th>Model</th>
+      <th>Price</th>
+      <th>Duration</th>
+      <th>Servicer_name</th>
+      <th>Servicer_experience</th>
+      <th>final Price</th>
+  </tr>
+  <tbody>
+      <tr ng-repeat="emp in Company|filter:search|orderBy:Model">
+          <td>{{emp.Company|uppercase}}</td>
+          <td>{{emp.Model|myFormat}}</td>
+          <td>{{emp.Price|currency}}</td>
+          <td>{{emp.Duration}}</td>
+          <td>{{emp.Servicer_name}}</td>
+          <td>{{emp.Servicer_experience|number:1}}</td>
+          <td>{{emp.Price|myFormat1|currency}}</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  
+</body>
+
+</html>
